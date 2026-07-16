@@ -1,0 +1,18 @@
+{
+  "short_name": "BV Portfolio",
+  "name": "Banala Venkateswarlu | Portfolio",
+  "description": "Mechanical Engineering Student & Coding Enthusiast at RGUKT Nuzvid.",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#0b0f19",
+  "theme_color": "#0b0f19",
+  "display": "standalone",
+  "orientation": "portrait"
+}

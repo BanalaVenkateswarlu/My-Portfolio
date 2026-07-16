@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/
+
+User-agent: *
+Allow: /
+
+# Block crawlers from seeing temporary custom error pages directly
+Disallow: /404.html
+
+# Sitemaps list
+Sitemap: https://banala-venkateswarlu.netlify.app/sitemap.xml

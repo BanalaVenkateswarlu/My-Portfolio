@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Banala Venkateswarlu</title>
+  <meta name="robots" content="noindex, follow">
+  <style>
+    :root {
+      --bg-primary: #0b0f19;
+      --bg-secondary: #111827;
+      --text-primary: #f3f4f6;
+      --text-secondary: #9ca3af;
+      --color-software: #00ffcc;
+      --color-hardware: #f59e0b;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 1.5rem;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .error-container {
+      background-color: var(--bg-secondary);
+      border: 1px solid #1f2937;
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .error-code {
+      font-size: 6rem;
+      font-weight: 800;
+      color: var(--color-hardware);
+      line-height: 1;
+      margin-bottom: 1rem;
+      letter-spacing: -0.05em;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--color-software);
+      color: #0b0f19;
+      padding: 0.8rem 1.6rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: opacity 0.15s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .btn:focus-visible {
+      outline: 3px solid var(--color-software);
+      outline-offset: 3px;
+    }
+
+    .countdown {
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="error-container">
+    <div class="error-code">404</div>
+    <h1>Lost in Space?</h1>
+    <p>The page you are looking for doesn't exist or has been moved. Let's get you back to the main engineering dock.</p>
+    
+    <a href="index.html" class="btn" id="home-btn">Go Back Home</a>
+    
+    <div class="countdown" id="redirect-message">
+      Redirecting to home in <span id="timer">10</span> seconds...
+    </div>
+  </div>
+
+  <script>
+    // Automatic fallback redirection for optimal UX
+    let seconds = 10;
+    const timerSpan = document.getElementById('timer');
+    const interval = setInterval(() => {
+      seconds--;
+      timerSpan.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(interval);
+        window.location.href = 'index.html';
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
